@@ -35,7 +35,6 @@ export default function Home() {
         <TechStackSwitcher />
         <Projects />
         <Timeline />
-        <CodePlayground />
         <Resume />
         <Contact />
         <Footer />
