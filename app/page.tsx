@@ -8,7 +8,6 @@ import SkillRadar from '@/components/skill-radar';
 import TechStackSwitcher from '@/components/tech-stack-switcher';
 import Projects from '@/components/projects';
 import Timeline from '@/components/timeline';
-import CodePlayground from '@/components/code-playground';
 import Resume from '@/components/resume';
 import Contact from '@/components/contact';
 import Footer from '@/components/footer';
