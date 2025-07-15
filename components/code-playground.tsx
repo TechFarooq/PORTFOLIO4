@@ -1,7 +1,8 @@
 'use client';
 
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import dracula from 'prism-react-renderer/themes/dracula'; // ✅ FIXED LINE
+// Type assertion to fix TS error from missing declaration
+import dracula from 'prism-react-renderer/themes/dracula' as any;
 
 const code = `
 function HelloWorld() {
@@ -17,7 +18,7 @@ export default function CodePlayground() {
       <LiveProvider code={code.trim()} theme={dracula} noInline={true}>
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <LiveEditor className="rounded-md border border-gray-700 text-sm" />
+            <LiveEditor className="rounded-md border border-gray-700 text-sm overflow-auto max-h-64" />
             <LiveError className="text-red-500 mt-2" />
           </div>
           <div className="bg-gray-800 p-4 rounded-md">
@@ -28,4 +29,5 @@ export default function CodePlayground() {
     </div>
   );
 }
+
 
